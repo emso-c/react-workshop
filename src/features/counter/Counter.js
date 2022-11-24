@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '@components/atoms/Button';
 import Text from '@components/atoms/Text';
 
 function Counter() {
+    const [count, setCount] = useState(0);
     return (
-        <div style={styles.container}>
-            <Button up />
-            <Text Text={5}/>
-            <Button down />
-        </div>
+        <>
+            <Text Text="Sabır Counter" />
+            <div style={styles.container}>
+                <Button down onClick={()=>{setCount(count-1)}}/>
+                <Text Text={count}/>
+                <Button up onClick={()=>{setCount(count+1)}}/>
+            </div>
+            <Text Text={count<0 ? "Sabrım kalmadı": "Sabırlıyım"} />
+        </>
     )
 }
 
@@ -17,7 +22,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
+        height: '20vh',
         gap: '2rem'
     }
 }
