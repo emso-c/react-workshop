@@ -4,14 +4,22 @@ import Text from '@components/atoms/Text';
 
 function Counter() {
     return (
-        <>
+        <div style={styles.container}>
             <Button up />
-            <br></br>
             <Text Text={5}/>
-            <br></br>
             <Button down />
-        </>
+        </div>
     )
+}
+
+const styles = {
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        gap: '2rem'
+    }
 }
 
 export default Counter
