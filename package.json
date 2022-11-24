@@ -54,7 +54,7 @@
         "husky": "^8.0.0",
         "lint-staged": "^13.0.3",
         "msw": "^0.47.4",
-        "prettier": "^2.7.1"
+        "prettier": "^2.8.0"
     },
     "msw": {
         "workerDirectory": "public"
@@ -67,5 +67,9 @@
             "^@components(.*)$": "<rootDir>/src/components$1",
             "^@features(.*)$": "<rootDir>/src/features$1"
         }
+    },
+    "optionalDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+        "prettier": "^2.8.0"
     }
 }
