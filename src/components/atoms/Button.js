@@ -1,10 +1,10 @@
 import React from 'react';
 import './Button.css';
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <button className="button">
-        <span>arttır</span>
+    <button className="button" {...props}>
+        <span>{props.up ? "↑" : "↓"}</span>
     </button>
   )
 }
