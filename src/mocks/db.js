@@ -9,10 +9,17 @@ const db = factory({
         author: () => faker.name.fullName(),
         image: () => faker.image.imageUrl(640, 480, 'cat', true),
     },
+    dog: {
+        id: primaryKey(faker.datatype.uuid),
+        title: () => faker.animal.dog(),
+        image: () => faker.image.imageUrl(640, 480, 'dog', true),
+    }
 });
 
-db.post.create();
-db.post.create();
-db.post.create();
+for(var i = 0; i < 10; i++)
+    db.post.create();
+
+for(var i = 0; i < 100; i++)
+    db.dog.create();
 
 export default db;

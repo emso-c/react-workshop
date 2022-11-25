@@ -7,5 +7,12 @@
             "author": "typicode",
             "image": "https://loremflickr.com/1234/2345/cats"
         }
+    ],
+    "dogs": [
+        {
+            "id": 1,
+            "title": "dog",
+            "image": "https://loremflickr.com/1234/2345/dogs"
+        }
     ]
 }
