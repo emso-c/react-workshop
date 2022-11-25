@@ -1,4 +1,6 @@
+// @ts-ignore
 import Button from "@components/atoms/Button";
+// @ts-ignore
 import Text from "@components/atoms/Text";
 import React, { useState } from "react";
 
